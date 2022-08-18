@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'auth_layout.html' %}
+
+{%block body_block%}
+
+
+    <div class="auth-form">
+        <h4 class="text-center mb-4">Create Your Account</h4>
+            <form  action="" method="post">
+                {%csrf_token%}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </form>
+    </div>
+
+{%endblock%}

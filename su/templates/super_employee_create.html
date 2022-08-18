@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends 'index.html' %}
+{%load crispy_forms_tags %}
+
+{%block body_block%}
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h3 class="mt-5">Create Employee</h3>
+
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form|crispy}}
+            <button href="{%url 'listemployee'%}" class="btn btn-danger createbtn mt-3" type="submit">Create Employee</button>
+        </form>
+
+<!--        <p class="ml-5 mt-2 logintext">Already have an account ? <a href="" class="link">Login</a></p>-->
+    </div>
+    <div class="col-4"></div>
+</div>
+
+{%endblock%}
